@@ -1,5 +1,7 @@
 #!/usr/bin/env puma
 
+# Source: https://github.com/puma/puma/blob/master/examples/config.rb
+
 # The directory to operate out of.
 #
 # The default is the current directory.
