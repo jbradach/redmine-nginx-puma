@@ -1,0 +1,26 @@
+# https://gist.github.com/jbradach/31ad6d9c84c3be3b5730
+
+upstream puma_redmine {
+  server unix:/home/redmine/redmine/tmp/sockets/redmine.sock fail_timeout=0;
+  #server 127.0.0.1:3000;
+}
+
+server {
+  server_name YOUR.SERVER.NAME;
+  listen 80;
+  root /home/redmine/redmine/public;
+
+  location / {
+    try_files $uri/index.html $uri.html $uri @ruby;
+  }
+
+  location @ruby {
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Real-IP  $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_redirect off;
+    proxy_read_timeout 300;
+    proxy_pass http://puma_redmine;
+  }
+}
