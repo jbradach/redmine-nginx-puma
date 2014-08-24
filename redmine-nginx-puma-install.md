@@ -9,7 +9,6 @@ Update your package lists and upgrade any existing packages.
 ```shell
 sudo apt-get update
 sudo apt-get -y upgrade
-cd lol apt-
 ```
 
 Install a few dependencies to make sure we can compile Ruby and use the necessary gems.
