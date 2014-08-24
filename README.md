@@ -17,8 +17,9 @@ Documentation
 * [redmine-nginx-puma-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-nginx-puma-install.md)
 * [nginx-uwsgi-mariadb-lemp-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/nginx-uwsgi-mariadb-lemp-install.md)
 * [redmine-smtp-sendmail-configuration.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-smtp-sendmail-configuration.md)
+* [redmine-forwarding-incoming-email.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-forwarding-incoming-email.md)
 
-Configurations
+Configuration
 ----
 The directories in this project correspond to Ubuntu server locations and contain sample configuration files that can be used there.
 
