@@ -245,7 +245,7 @@ sudo curl -Lo /etc/init.d/redmine \
 ```
 
 ```shell
-chmod +x /etc/init.d/redmine
+sudo chmod +x /etc/init.d/redmine
 sudo update-rc.d redmine defaults
 ```
 
@@ -295,7 +295,7 @@ Link the config to sites-enabled and restart Nginx and you're done!
 
 ```shell
 sudo ln -s /etc/nginx/sites-available/redmine /etc/nginx/sites-enabled/redmine
-sudo service nginx restrart
+sudo service nginx restart
 ```
 
 Log into Redmine with the default account admin/admin. Visit My Account to change the default password. You can change the default account's username by visiting the Users section under Administration.
