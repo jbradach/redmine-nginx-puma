@@ -14,8 +14,8 @@ Sample configuration files and documentation for installing Redmine with Nginx a
 
 Documentation
 ----
-* redmine-nginx-puma-install.md
-* nginx-uwsgi-mariadb-lemp-install.md
+* [redmine-nginx-puma-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-nginx-puma-install.md)
+* [nginx-uwsgi-mariadb-lemp-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/nginx-uwsgi-mariadb-lemp-install.md)
 
 Configurations
 ----
@@ -37,5 +37,4 @@ Meta
 
 License
 ----
-
 This project is licensed under the [MIT License](http://opensource.org/licenses/mit-license.php).
