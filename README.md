@@ -16,7 +16,7 @@ Documentation
 ----
 * [redmine-nginx-puma-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-nginx-puma-install.md)
 * [nginx-uwsgi-mariadb-lemp-install.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/nginx-uwsgi-mariadb-lemp-install.md)
-* [redmine-smtp-sendmail-configuration.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/nginx-uwsgi-mariadb-lemp-install.md)
+* [redmine-smtp-sendmail-configuration.md](https://github.com/jbradach/redmine-nginx-puma/blob/master/redmine-smtp-sendmail-configuration.md)
 
 Configurations
 ----
