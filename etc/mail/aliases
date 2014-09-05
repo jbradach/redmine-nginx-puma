@@ -1,0 +1,3 @@
+redmine: "|/home/redmine/sub-mailhandler.py --email redmine@<YOURSERVER> --project defaultproject -- /home/redmine/rdm-mailhandler.rb --url http://<YOURSERVER> --tracker bug --allow-override tracker,priority --key <YOURKEY>"
+postmaster: root
+abuse: root

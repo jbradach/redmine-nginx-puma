@@ -25,6 +25,7 @@ The directories in this project correspond to Ubuntu server locations and contai
 
 | Local Directory | Server Path           | Comments                        |
 |-----------------|-----------------------|---------------------------------|
+| mail            | /etc/mail             | Sendmail configuration files    |
 | home            | /home/redmine         | Redmine user home directory     |
 | init.d          | /etc/init.d           | Start/stop scripts for services |
 | nginx           | /etc/nginx            | Nginx configuration files       |
@@ -33,7 +34,6 @@ The directories in this project correspond to Ubuntu server locations and contai
 Meta
 ----
 * Author: James Bradach
-* Email: james@rudeotter.com
 * Twitter: [@toomuchtofu](http://twitter.com/toomuchtofu)
 * Site: http://blog.rudeotter.com
 
