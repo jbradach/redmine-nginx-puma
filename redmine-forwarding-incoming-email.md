@@ -6,7 +6,7 @@
 
 In order to forward messages directly to Redmine from your mail server, you'll need to be able to add new email aliases and you'll need enable the API that processes incoming messages.
 
-To enable the API go to the incoming emails settings under the administrative menu. The URL should be http://<YOURSERVER>/settings?tab=mail_handler. On this screen, check **Enable WS for incoming emails**, click **Generate a key**, and then save. You'll need this API key later.
+To enable the API go to the incoming emails settings under the administrative menu. The URL should be http://&lt;YOURSERVER&gt;/settings?tab=mail_handler. On this screen, check **Enable WS for incoming emails**, click **Generate a key**, and then save. You'll need this API key later.
 
 ### rdm-mailhandler.rb
 
@@ -66,7 +66,7 @@ Issue attributes control options:
                                 ATTRS is a comma separated list of attributes
 ```
 
-Finally, here a couple examples uses.
+The help also includes a couple examples: 
 
 ```shell
 No project specified, emails MUST contain the 'Project' keyword:
@@ -88,7 +88,7 @@ Tracker: Feature
 Priority: Low
 ```
 
-If attributes such as project are missing, Redmine will not know what to do with the message. To avoid this, attributes can be locked in at the time of configuration. If you want to define values for these attributes but still allow user email content to be used when available, --allow-override can be used to identify the attributes that may be overriden.
+If attributes such as project are missing, Redmine will not know what to do with the message. To avoid this, attributes can be locked in at the time of configuration. If you want to define values for these attributes but still allow user email content to be used when available, --allow-override can be used to identify the attributes that may be overridden.
 
 ```shell
 rdm-mailhandler.rb --url http://<YOURSERVER> --key <YOURKEY> \
@@ -98,7 +98,7 @@ rdm-mailhandler.rb --url http://<YOURSERVER> --key <YOURKEY> \
 
 With this configuration all emails are assigned defaultproject as their project, bug as their tracker, and are given a normal priority. With allow-override here, the user could set their own tracker or priority but they cannot change the project.
 
-To begin using this mail handler, add it as an alias in /etc/aliases.
+To begin using this mail handler, add it as an alias in /etc/aliases. 
 
 ```shell
 redmine: "|/home/redmine/rdm-mailhandler.rb --url http://<YOURSERVER> --key <YOURKEY> --project defaultproject --tracker bug --priority normal –-allow-override tracker,priority"
@@ -114,7 +114,7 @@ Messages to redmine are now creating bug issues for defaultproject.
 
 ### sub-mailhandler.py
 
-If you have multiple projects, sub-mailhandler.py can help you avoid the need for constant project overrides in your email. This tools scans email headers looking for sub-addresses (redmine+project23@yourdomain.com) and when found, passes on the message with the project project.
+If you have multiple projects, sub-mailhandler.py can help you avoid the need for constant project overrides in your email. This script scans email headers looking for sub-addresses (redmine+project23@yourdomain.xyz) and when found, passes on the message with the project.
 
 ```shell
 curl -o /home/redmine/sub-mailhandler.py http://www.redmine.org/attachments/download/6759/sub-mailhandler.py
@@ -139,7 +139,7 @@ Options:
 
 ```
 
-This script goes in front of rdm-mailhander.rb in your alias. You'll have to add the receipient's email and the project argument moves to sub-mailhandler.py.
+This script goes in front of rdm-mailhander.rb in your alias. You'll have to add the recipient's email and the project argument moves to sub-mailhandler.py.
 
 ```shell
 redmine: "|/home/redmine/sub-mailhandler.py --email redmine@<YOURSERVER> --project defaultproject -- /home/redmine/rdm-mailhandler.rb --url http://<YOURSERVER> --tracker bug --allow-override tracker,priority --key <YOURKEY>"
