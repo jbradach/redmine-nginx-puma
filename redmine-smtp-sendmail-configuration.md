@@ -65,7 +65,7 @@ production:
 ### SMTP with Plain Authentication
 
 ```yaml
-production:
+default:
  email_delivery:
    delivery_method: :smtp
    smtp_settings:
@@ -98,7 +98,7 @@ default:
 ### SMTP Office 365 with TLS
 
 ```yaml
-production:
+default:
   email_delivery:
     delivery_method: :smtp
     smtp_settings:
@@ -129,8 +129,8 @@ Once you've updated configuration.yml with your mail settings, restart Redmine.
 sudo service redmine restart
 ```
 
-Confirm that you've updated your account's email address from the admin default at http://<SERVERNAME>/my/account. This address is where notifications will be sent.
+Confirm that you've updated your account's email address from the admin default at http://&lt;SERVERNAME&gt;/my/account. This address is where notifications will be sent.
 
-Go to the email notification settings under the administration menu. Update the emission email address and hit save. This should be located at http://<SERVERNAME>/settings?tab=notifications.
+Go to the email notification settings under the administration menu. Update the emission email address and hit save. This should be located at http://&lt;SERVERNAME&gt;/settings?tab=notifications.
 
-Once the email address has been updated, you can click the send a test email link at the bottom of the page. If an error message does not appear on the screen rightr away, go to your email to see if the message went through successfully.
+Once the email address has been updated, you can click the send a test email link at the bottom of the page. If an error message does not appear on the screen right away, go to your email to see if the message went through successfully.
