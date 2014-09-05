@@ -2,6 +2,8 @@
 
 >While Python projects deployed using Nginx and uWSGI can have an overwhelming number configuration options available, deploying basic apps with them can actually be pretty painless. Here's one simple option for setting up your LEMP stack on Ubuntu and deploying a [Flask ](http://flask.pocoo.org/)application.
 
+>**If you're just interested in following the Redmine tutorial it is not necessary to install uWSGI.**
+
 ## Getting Started
 
 Before installing any new software, make sure your system is up to date. If installing MariaDB, you'll first need to [add the right repository for your release](https://downloads.mariadb.org/mariadb/repositories). The below example adds a repository for MariaDB 5.5 on Ubuntu 12.04.
@@ -95,6 +97,8 @@ sudo ln -s /etc/nginx/sites-available/flaskapp /etc/nginx/sites-enabled/flaskapp
 ```
 
 ## uWSGI
+
+**Optional if you're just following the Redmine installation tutorial.**
 
 Install uWSGI with pip and create directories for configuration files and logs.
 
