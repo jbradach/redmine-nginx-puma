@@ -14,7 +14,7 @@ sudo apt-get -y upgrade
 Install a few dependencies to make sure we can compile Ruby and use the necessary gems.
 
 ```shell
-sudo apt-get install autoconf git-core subversion curl \
+sudo apt-get install autoconf git subversion curl \
     libmagickwand-dev bison build-essential libmariadbclient-dev libssl-dev \
     libreadline-dev libyaml-dev zlib1g-dev python-software-properties
 ```
