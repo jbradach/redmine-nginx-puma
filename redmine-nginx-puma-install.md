@@ -14,8 +14,8 @@ sudo apt-get -y upgrade
 Install a few dependencies to make sure we can compile Ruby and use the necessary gems.
 
 ```shell
-sudo apt-get install autoconf git subversion curl \
-    libmagickwand-dev bison build-essential libmariadbclient-dev libssl-dev \
+sudo apt-get install autoconf git subversion curl bison \
+    imagemagick libmagickwand-dev build-essential libmariadbclient-dev libssl-dev \
     libreadline-dev libyaml-dev zlib1g-dev python-software-properties
 ```
 
@@ -247,6 +247,11 @@ sudo curl -Lo /etc/init.d/redmine \
 ```shell
 sudo chmod +x /etc/init.d/redmine
 sudo update-rc.d redmine defaults
+```
+
+Puma will now load on boot, but go ahead and start it this time.
+```shell
+service puma start
 ```
 
 ## Nginx Server Block
