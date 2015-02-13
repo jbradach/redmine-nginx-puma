@@ -249,9 +249,9 @@ sudo chmod +x /etc/init.d/redmine
 sudo update-rc.d redmine defaults
 ```
 
-Puma will now load on boot, but go ahead and start it this time.
+Puma will now load Redmine on boot, but go ahead and start it this time.
 ```shell
-service puma start
+service redmine start
 ```
 
 ## Nginx Server Block
