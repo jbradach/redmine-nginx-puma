@@ -31,11 +31,6 @@ The directories in this project correspond to Ubuntu server locations and contai
 | nginx           | /etc/nginx            | Nginx configuration files       |
 | redmine         | /home/redmine/redmine | Redmine application directory   |
 
-Meta
-----
-* Author: James Bradach
-* Twitter: [@toomuchtofu](http://twitter.com/toomuchtofu)
-* Site: http://blog.rudeotter.com
 
 License
 ----
